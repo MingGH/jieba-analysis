@@ -68,7 +68,7 @@ public class TFIDFAnalyzer
 	 * tf值计算公式
 	 * tf=N(i,j)/(sum(N(k,j) for all k))
 	 * N(i,j)表示词语Ni在该文档d（content）中出现的频率，sum(N(k,j))代表所有词语在文档d中出现的频率之和
-	 * @param content
+	 * @param content content
 	 * @return
 	 */
 	private Map<String, Double> getTF(String content) {
@@ -105,7 +105,6 @@ public class TFIDFAnalyzer
 	 * 默认jieba分词的停词表
 	 * url:https://github.com/yanyiwu/nodejieba/blob/master/dict/stop_words.utf8
 	 * @param set
-	 * @param filePath
 	 */
 	private void loadStopWords(Set<String> set, InputStream in){
 		BufferedReader bufr;
@@ -134,8 +133,6 @@ public class TFIDFAnalyzer
 	/**
 	 * idf值本来需要语料库来自己按照公式进行计算，不过jieba分词已经提供了一份很好的idf字典，所以默认直接使用jieba分词的idf字典
 	 * url:https://raw.githubusercontent.com/yanyiwu/nodejieba/master/dict/idf.utf8
-	 * @param set
-	 * @param filePath
 	 */
 	private void loadIDFMap(Map<String,Double> map, InputStream in ){
 		BufferedReader bufr;
