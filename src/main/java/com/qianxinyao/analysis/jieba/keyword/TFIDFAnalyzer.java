@@ -169,11 +169,11 @@ public class TFIDFAnalyzer
 	
 	public static void main(String[] args)
 	{
-		String content="孩子上了幼儿园 安全防拐教育要做好";
-		int topN=5;
-		TFIDFAnalyzer tfidfAnalyzer=new TFIDFAnalyzer();
-		List<Keyword> list=tfidfAnalyzer.analyze(content,topN);
-		for(Keyword word:list)
+		String content = "孩子上了幼儿园 安全防拐教育要做好";
+		int topN = 5;
+		TFIDFAnalyzer tfidfAnalyzer = new TFIDFAnalyzer();
+		List<Keyword> list = tfidfAnalyzer.analyze(content,topN);
+		for(Keyword word : list)
 			System.out.print(word.getName()+":"+word.getTfidfvalue()+",");
 	}
 }
