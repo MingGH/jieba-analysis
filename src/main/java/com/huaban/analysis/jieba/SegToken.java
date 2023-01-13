@@ -14,10 +14,36 @@ public class SegToken {
         this.endOffset = endOffset;
     }
 
+    public String getWord() {
+        return word;
+    }
+
+    public void setWord(String word) {
+        this.word = word;
+    }
+
+    public int getStartOffset() {
+        return startOffset;
+    }
+
+    public void setStartOffset(int startOffset) {
+        this.startOffset = startOffset;
+    }
+
+    public int getEndOffset() {
+        return endOffset;
+    }
+
+    public void setEndOffset(int endOffset) {
+        this.endOffset = endOffset;
+    }
 
     @Override
     public String toString() {
-        return "[" + word + ", " + startOffset + ", " + endOffset + "]";
+        return "SegToken{" +
+                "word='" + word + '\'' +
+                ", startOffset=" + startOffset +
+                ", endOffset=" + endOffset +
+                '}';
     }
-
 }
